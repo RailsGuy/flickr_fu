@@ -34,4 +34,14 @@ class Flickr::Photos::PhotoResponse
   def method_missing(method, *args, &block)
     self.photos.respond_to?(method) ? self.photos.send(method, *args, &block) : super
   end
+  
+  # Total pages returned
+  def total_pages
+    self.total / self.per_page
+  end
+  
+  # Alias page
+  def current_page
+    self.page
+  end
 end
