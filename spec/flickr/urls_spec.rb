@@ -85,7 +85,7 @@ describe Flickr::Urls do
 
       it "should be kind of a String" do
         @flickr.should_receive(:request_over_http).and_return(@valid_lookup_user_xml)
-        @flickr.urls.lookup_user("htp://www.flickr.com/photos/lvizard").should be_kind_of String
+        @flickr.urls.lookup_user("htp://www.flickr.com/photos/lvizard").should be_kind_of(String)
       end
 
       it "should have a username attribute containing the user's name" do

@@ -1,0 +1,7 @@
+<rsp stat="ok">
+	<groups page="1" pages="1" perpage="100" total="3">
+		<group nsid="1234567N11" name="Test Group 1" eighteenplus="0"/>
+		<group nsid="1234567N22" name="Test Group 2" eighteenplus="0"/>
+		<group nsid="1234567N33" name="Test Group 3" eighteenplus="0"/>
+	</groups>
+</rsp>

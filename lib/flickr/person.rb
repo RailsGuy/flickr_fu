@@ -43,13 +43,13 @@ class Flickr::People::Person
 
     rsp = @flickr.send_request('flickr.people.getPublicPhotos', options)
 
-    returning Flickr::Photos::PhotoResponse.new(:page => rsp.photos[:page].to_i,
+    returning Flickr::FlickrResponse.new(:page => rsp.photos[:page].to_i,
                                 :pages => rsp.photos[:pages].to_i,
                                 :per_page => rsp.photos[:perpage].to_i,
                                 :total => rsp.photos[:total].to_i,
                                 :photos => [],
                                 :api => self,
-                                :method => 'public_photos',
+                                :method => :public_photos,
                                 :options => options) do |photos|
       rsp.photos.photo.each do |photo|
         attributes = {:id => photo[:id], 

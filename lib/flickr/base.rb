@@ -134,6 +134,9 @@ module Flickr
 
     # creates and/or returns the Flickr::Urls object
     def urls() @urls ||= Flickr::Urls.new(self) end
+
+    # creates and/or returns the Flickr::Groups object
+    def groups() @groups ||= Flickr::Groups.new(self) end
             
     protected
     
